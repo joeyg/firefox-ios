@@ -221,7 +221,7 @@
 		39EB46991E26DDB4006346E8 /* ScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB46971E26DDB4006346E8 /* ScreenGraph.swift */; };
 		39EB469A1E26DDB4006346E8 /* FxScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB46981E26DDB4006346E8 /* FxScreenGraph.swift */; };
 		39F6D0701CD3B0770055D949 /* HomePageSettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6D06F1CD3B0770055D949 /* HomePageSettingsUITests.swift */; };
-		39F99FE21E3A6F0600F353B4 /* PushClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F99FDF1E3A6ED400F353B4 /* PushClientTests.swift */; };
+		39F99FE21E3A6F0600F353B4 /* LivePushClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F99FDF1E3A6ED400F353B4 /* LivePushClientTests.swift */; };
 		39F99FE41E3A6F1700F353B4 /* PushClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F99FD91E3A6DE300F353B4 /* PushClient.swift */; };
 		39F99FE51E3A6F1700F353B4 /* PushConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F99FDA1E3A6DE300F353B4 /* PushConfiguration.swift */; };
 		39F99FE61E3A6F1700F353B4 /* PushRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F99FDB1E3A6DE300F353B4 /* PushRegistration.swift */; };
@@ -1400,7 +1400,7 @@
 		39F99FD91E3A6DE300F353B4 /* PushClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushClient.swift; path = Push/PushClient.swift; sourceTree = "<group>"; };
 		39F99FDA1E3A6DE300F353B4 /* PushConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushConfiguration.swift; path = Push/PushConfiguration.swift; sourceTree = "<group>"; };
 		39F99FDB1E3A6DE300F353B4 /* PushRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushRegistration.swift; path = Push/PushRegistration.swift; sourceTree = "<group>"; };
-		39F99FDF1E3A6ED400F353B4 /* PushClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushClientTests.swift; sourceTree = "<group>"; };
+		39F99FDF1E3A6ED400F353B4 /* LivePushClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePushClientTests.swift; sourceTree = "<group>"; };
 		39F99FED1E3A71F800F353B4 /* FxALoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FxALoginHelper.swift; path = Helpers/FxALoginHelper.swift; sourceTree = "<group>"; };
 		3B0943801D6CC4FC004F24E1 /* FilledPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledPageControl.swift; path = ThirdParty/FilledPageControl.swift; sourceTree = "<group>"; };
 		3B39EDB91E16E18900EF029F /* CustomSearchEnginesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchEnginesTest.swift; sourceTree = "<group>"; };
@@ -2403,7 +2403,7 @@
 				2FFC4D371ABE3C420081D675 /* FxAStateTests.swift */,
 				2FA4363A1ABB8448008031D1 /* HawkHelperTests.swift */,
 				2FA4363B1ABB8448008031D1 /* LiveAccountTest.swift */,
-				39F99FDF1E3A6ED400F353B4 /* PushClientTests.swift */,
+				39F99FDF1E3A6ED400F353B4 /* LivePushClientTests.swift */,
 				2FDBCF9A1AC0ADB500AFF7F0 /* SyncAuthStateTests.swift */,
 				2FA4363C1ABB8448008031D1 /* TokenServerClientTests.swift */,
 				E6C9EB6A1E2FBFC300D5CE80 /* signedInUser.json */,
@@ -2563,16 +2563,6 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		3B4262D31E538EB100CA681C /* Metadata Parsing */ = {
-			isa = PBXGroup;
-			children = (
-				3B4262E21E538EC400CA681C /* MetadataHelper.js */,
-				3B4262E31E538EC400CA681C /* MetadataParserHelper.swift */,
-				3B4262E41E538EC400CA681C /* page-metadata-parser.js */,
-			);
-			name = "Metadata Parsing";
-			sourceTree = "<group>";
-		};
 		39F99FC71E3A6DB700F353B4 /* Push */ = {
 			isa = PBXGroup;
 			children = (
@@ -2581,6 +2571,16 @@
 				39F99FDB1E3A6DE300F353B4 /* PushRegistration.swift */,
 			);
 			name = Push;
+			sourceTree = "<group>";
+		};
+		3B4262D31E538EB100CA681C /* Metadata Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				3B4262E21E538EC400CA681C /* MetadataHelper.js */,
+				3B4262E31E538EC400CA681C /* MetadataParserHelper.swift */,
+				3B4262E41E538EC400CA681C /* page-metadata-parser.js */,
+			);
+			name = "Metadata Parsing";
 			sourceTree = "<group>";
 		};
 		3B43E3D11D95C48D00BBA9DB /* StoragePerfTests */ = {
@@ -4068,7 +4068,7 @@
 					};
 					2FA436041ABB83B4008031D1 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -4098,7 +4098,7 @@
 					};
 					3BFE4B061D342FB800DDF53F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9G8J6YA743;
+						DevelopmentTeam = 43AQ936H96;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -4134,7 +4134,7 @@
 					};
 					E4D567211ADECE2700F1EFE7 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 9G8J6YA743;
+						DevelopmentTeam = 43AQ936H96;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -4146,7 +4146,7 @@
 					};
 					E6F9650B1B2F1CF20034B023 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 					};
 					F84B21BD1A090F8100AAB793 = {
@@ -4833,7 +4833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA4363E1ABB8448008031D1 /* FxAClient10Tests.swift in Sources */,
-				39F99FE21E3A6F0600F353B4 /* PushClientTests.swift in Sources */,
+				39F99FE21E3A6F0600F353B4 /* LivePushClientTests.swift in Sources */,
 				2FDBCF9B1AC0ADB500AFF7F0 /* SyncAuthStateTests.swift in Sources */,
 				2FA436421ABB8448008031D1 /* TokenServerClientTests.swift in Sources */,
 				2FFC4D381ABE3C420081D675 /* FxAStateTests.swift in Sources */,

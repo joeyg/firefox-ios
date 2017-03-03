@@ -7,7 +7,7 @@ import Foundation
 import Shared
 import XCTest
 
-class PushClientTests: XCTestCase {
+class LivePushClientTests: XCTestCase {
 
     var endpointURL: NSURL {
         return DeveloperPushConfiguration().endpointURL
