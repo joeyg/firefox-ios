@@ -545,9 +545,18 @@ class ASHorizontalScrollCellManager: NSObject, UICollectionViewDelegate, UIColle
         guard let url = contentItem.url.asURL else {
             return
         }
+
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.clear
+        collectionView.deselectItem(at: indexPath, animated: true)
         urlPressedHandler?(url, indexPath)
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.lightGray
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.width
         pageChangedHandler?(scrollView.contentOffset.x / pageWidth)

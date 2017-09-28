@@ -315,9 +315,15 @@ extension ActivityStreamPanel: UICollectionViewDelegateFlowLayout {
                 return UICollectionReusableView()
         }
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = UIColor.lightGray
+    }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.longPressRecognizer.isEnabled = false
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = UIColor.clear
+        collectionView.deselectItem(at: indexPath, animated: true)
         selectItemAtIndex(indexPath.item, inSection: Section(indexPath.section))
     }
 
